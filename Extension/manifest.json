@@ -1,0 +1,27 @@
+{
+    "name": "Microscopy KI Extension",
+    "version": "0.1",
+    "description": "An extension for http://mikroskop.neuro.ki.se/ to more effectively study histology.",
+    "manifest_version": 3,
+    "author": "Lukas Schulte",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "images/icon_48.jpg",
+        "default_title": "Microscopy KI Extension"
+    },
+    "icons": {
+        "128": "images/icon_128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["http://mikroskop.neuro.ki.se/*", "https://mikroskop.neuro.ki.se/*"],
+            "js": ["content-script.js"],
+            "runAt": "document_idle",
+            "css": ["content-style.css"]
+        }
+    ]
+}
