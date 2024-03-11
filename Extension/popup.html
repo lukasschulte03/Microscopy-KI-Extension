@@ -1,44 +1,99 @@
 <!DOCTYPE html>
-<html lang="en" style="width: 200%;">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microscopy KI Extension</title>
-    <style>
-        body {
-            width: 550px;
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+<html lang="en" style="width: 200%">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Microscopy KI Extension</title>
+		<style>
+			:root {
+				--primary-color: rgb(97, 97, 255);
+				--secondary-color: rgb(255, 255, 255);
+				--border-thickness: 5px;
+				--window-width: 550px;
+				--window-height: 250px;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				width: var(--window-width);
+				height: var(--window-height);
+				background: rgb(131, 58, 180);
+				background: radial-gradient(
+					circle,
+					rgba(131, 58, 180, 1) 0%,
+					rgba(253, 29, 29, 1) 50%,
+					rgba(252, 176, 69, 1) 100%
+				);
+				padding: var(--border-thickness);
+			}
+			.body-container {
+				background-color: white;
+				width: calc(var(--window-width) - 2 * var(--border-thickness));
+				height: calc(
+					var(--window-height) - 2 * var(--border-thickness)
+				);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			h1 {
+				margin-bottom: 1rem;
+			}
 
-        .description a{
-            text-decoration: none;
-            color: white;
-            background-color: rgb(97, 97, 255);
-            border-radius: 0.25rem;
-            padding: 0.25rem 0.5rem;
-            margin: 0;
-            display: inline;
-        }
-        p {
-            display: inline;
-        }
-        .instructions-container {
-            margin-top: 1rem;
-            color: rgb(160, 160, 160);
-            
-        }
-        .instructions-container a{
-            color: rgb(160, 160, 160);
-        }
-        </style>
-</head>
-<body>
-    <h1>Microscopy KI Extension</h1>
-    <div class="description"><p>An extension for</p> <a href="http://mikroskop.neuro.ki.se/" target="_blank">mikroskop.neuro.ki.se</a> <p>to more effectively study histology</p></div>
-    <div class="instructions-container"> <p> for instructions, visit this extensions </p> <a href="https://github.com/lukasschulte03/Microscopy-KI-Extension" target="_blank">GitHub Page</a></div>
-</body>
+			.description a {
+				text-decoration: none;
+				color: white;
+				background-color: rgb(97, 97, 255);
+				border-radius: 0.25rem;
+				padding: 0.15rem 0.4rem;
+				margin: 0;
+				display: inline;
+				border: rgb(97, 97, 255) solid 2px;
+				transition: all 0.2s ease-in-out;
+			}
+			.description a:hover {
+				border: rgb(97, 97, 255) solid 2px;
+				color: rgb(97, 97, 255);
+				background-color: rgb(255, 255, 255);
+			}
+			p {
+				display: inline;
+			}
+			.instructions-container {
+				margin-top: 1rem;
+				color: rgb(160, 160, 160);
+			}
+			.instructions-container a {
+				color: rgb(160, 160, 160);
+				transition: all 0.2s ease-in-out;
+			}
+			.instructions-container a:hover {
+				color: rgb(97, 97, 255);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="body-container">
+			<h1>Microscopy KI Extension</h1>
+			<div class="description">
+				<p>An extension for</p>
+				<a href="http://mikroskop.neuro.ki.se/" target="_blank"
+					>mikroskop.neuro.ki.se</a
+				>
+				<p>to more effectively study histology</p>
+			</div>
+			<div class="instructions-container">
+				<p>for instructions, visit this extensions</p>
+				<a
+					href="https://github.com/lukasschulte03/Microscopy-KI-Extension"
+					target="_blank"
+					>GitHub Page</a
+				>
+			</div>
+		</div>
+	</body>
 </html>
