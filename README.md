@@ -15,3 +15,4 @@ An extension for http://mikroskop.neuro.ki.se/ to more effectively study histolo
 * Input what area you want to study in the propmt that appears when entering the site
 * Press **Space** to get a new random image from your selected area of interest
 * You can also hover your mouse over the gray box in the top left corner to see what the name of the current image is
+* To study another area, simply refresh the page and input a new area in the prompt
