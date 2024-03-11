@@ -14,6 +14,16 @@ main();
 function main(){
     get_user_study_area();
     setup();
+    display_random_item();
+    for (var i = 0; i < data.list_items.length; i++){
+        console.log(data.list_items[i]);
+        data.list_items[i].addEventListener("click", function(){
+            display_certain_item(this);
+        });
+    }
+
+
+    //display_random_item();
     addEventListener("keyup", event => {
         if (event.code === 'Space') {
             display_random_item();
@@ -72,8 +82,12 @@ function setup(){
 
 function display_random_item(){
     var idx = Math.floor(Math.random() * data.list_items.length);
-    list_items[idx].click();
-    var chosen_item_name = data.list_items[idx].innerHTML.split(".").pop();
+    display_certain_item(data.list_items[idx]);
+}
+
+function display_certain_item(item){
+    item.click();
+    var chosen_item_name = item.innerHTML.split(".").pop();
     data.hint_element.innerHTML = chosen_item_name;
     
     var hint_element_block = document.createElement("div");
