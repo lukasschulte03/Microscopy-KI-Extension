@@ -7,6 +7,10 @@
     height: 100%;
     opacity: 1;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .hint_element_block:hover{

@@ -27,19 +27,19 @@ function get_user_study_area() {
 	chosen = "";
 	valid_input = false;
 	//prompt user for study area
+	inp = prompt("What do you want to study? OSOF(1), Neuro(2), BV3(3)");
 	while (valid_input == false) {
-		inp = prompt("What do you want to study? OSOF(1), Neuro(2), BV3(3)");
-		if (Number(inp) == 1) {
+		if ((Number(inp) == 1) || (String(inp).toLowerCase() == "osof")) {
 			chosen = "OSOF";
 			valid_input = true;
-		} else if (Number(inp) == 2) {
+		} else if ((Number(inp) == 2) || (String(inp).toLowerCase() == "neuro")){
 			chosen = "Neuro";
 			valid_input = true;
-		} else if (Number(inp) == 3) {
+		} else if ((Number(inp) == 3) || (String(inp).toLowerCase() == "bv3")){
 			chosen = "Basvetenskap3";
 			valid_input = true;
 		} else {
-			console.log("Invalid selection! Please type 1, 2 or 3");
+			inp = prompt("Invalid input. Please input one of the following: OSOF(1), Neuro(2), BV3(3)");
 		}
 	}
 	//set chosen study area
@@ -104,5 +104,6 @@ function display_certain_item(item) {
 	var hint_element_block = document.createElement("div");
 	hint_element_block.className = "hint_element_block";
 	hint_element_block.onhov;
+	hint_element_block.innerHTML = "?";
 	data.hint_element.appendChild(hint_element_block);
 }
