@@ -6,7 +6,7 @@
     "author": "Lukas Schulte",
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "images/icon_48.jpg",
+        "default_icon": "images/icon_256.png",
         "default_title": "Microscopy KI Extension"
     },
     "icons": {
