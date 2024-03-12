@@ -12,7 +12,6 @@ main();
 function main() {
 	get_user_study_area();
 	setup();
-    display_random_item();
     hide_other_study_areas();
 
 	//display_random_item();
@@ -62,7 +61,8 @@ function setup() {
 	//add hint element block to the button_container
 	var hint_element_block = document.createElement("div");
 	hint_element_block.className = "hint_element_block";
-	hint_element.appendChild(hint_element_block);
+	hint_element_block.innerHTML = "?";
+	//hint_element.appendChild(hint_element_block);
 
 	//get the list items
 	list_items = document.querySelectorAll(
